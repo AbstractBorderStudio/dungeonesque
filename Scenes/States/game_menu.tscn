@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://b33xjax1ygtyk" path="res://Themes/main_theme.tres" id="1_hmrre"]
 [ext_resource type="Script" path="res://Scripts/States/GameMenu.cs" id="2_j3s1y"]
 
-[node name="GameMenu" type="Control" node_paths=PackedStringArray("cardDisplay")]
+[node name="GameMenu" type="Control" node_paths=PackedStringArray("cardDisplay", "rand")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +14,7 @@ grow_vertical = 2
 theme = ExtResource("1_hmrre")
 script = ExtResource("2_j3s1y")
 cardDisplay = NodePath("CardContainer")
+rand = NodePath("Button")
 
 [node name="CardContainer" parent="." instance=ExtResource("1_66aj2")]
 layout_mode = 1
@@ -27,3 +28,11 @@ offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 834.0
+offset_top = 305.0
+offset_right = 1019.0
+offset_bottom = 363.0
+text = "random"

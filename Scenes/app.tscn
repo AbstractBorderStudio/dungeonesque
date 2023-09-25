@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://dwaxktydbm3m4"]
 
-[ext_resource type="PackedScene" uid="uid://ckaygkmvqsam6" path="res://Scenes/game_handler.tscn" id="1_uc1us"]
+[ext_resource type="PackedScene" uid="uid://ckaygkmvqsam6" path="res://Scenes/Handlers/game_handler.tscn" id="1_uc1us"]
 [ext_resource type="PackedScene" uid="uid://cix1nx4u4y0ja" path="res://Scenes/States/main_menu.tscn" id="2_fsmj0"]
-[ext_resource type="PackedScene" uid="uid://241o01nms81s" path="res://Scenes/scene_handler.tscn" id="2_ytex5"]
+[ext_resource type="PackedScene" uid="uid://241o01nms81s" path="res://Scenes/Handlers/scene_handler.tscn" id="2_ytex5"]
 [ext_resource type="PackedScene" uid="uid://c1df8bof377oy" path="res://Scenes/States/Story.tscn" id="3_vlqs3"]
 [ext_resource type="Shader" path="res://Shader/applyTexture.gdshader" id="3_wy8l6"]
 [ext_resource type="Texture2D" uid="uid://bedugdhn7l83a" path="res://Textures/paper.png" id="4_f11li"]
@@ -12,7 +12,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_og4v4"]
 shader = ExtResource("3_wy8l6")
-shader_parameter/_col = Color(0.309804, 0.309804, 0.309804, 1)
+shader_parameter/_col = Color(0.235294, 0.34902, 0.160784, 1)
 shader_parameter/texture = ExtResource("4_f11li")
 
 [node name="App" type="Node"]

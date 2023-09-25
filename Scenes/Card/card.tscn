@@ -2,13 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://b33xjax1ygtyk" path="res://Themes/main_theme.tres" id="1_pimao"]
 [ext_resource type="Script" path="res://Scripts/Card/Card.cs" id="2_nu4ju"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwltd"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[ext_resource type="StyleBox" uid="uid://p47bqe8jmasd" path="res://Themes/cardBG.tres" id="3_73768"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hx2c7"]
 bg_color = Color(1, 1, 1, 1)
@@ -48,6 +42,7 @@ ability = NodePath("Background/DetailBox/Ability")
 item = NodePath("Background/DetailBox/Item")
 hp = NodePath("Background/HpBox/Hp")
 init = NodePath("Background/InitBox/Initiative")
+background = ExtResource("3_73768")
 metadata/_edit_group_ = true
 metadata/_edit_use_anchors_ = true
 
@@ -58,7 +53,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_wwltd")
+theme_override_styles/panel = ExtResource("3_73768")
 metadata/_edit_group_ = true
 
 [node name="DetailBox" type="Panel" parent="Background"]

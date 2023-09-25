@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Diagnostics.Contracts;
 
 namespace Dungeonesque
 {
@@ -19,6 +20,15 @@ namespace Dungeonesque
 				player.Hp.ToString(),
 				player.Initiative.ToString());
 			container.AddChild(card);
+		}
+
+		public void HighlightCard(int index)
+		{
+			foreach (Card c in container.GetChildren())
+				c.Highlight(false);
+			
+			Card _hCard = container.GetChild(index) as Card;
+			_hCard.Highlight(true);
 		}
 
 		public void ClearDisplay()
