@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dap8kaj3vuqia"]
+
+[ext_resource type="Theme" uid="uid://b33xjax1ygtyk" path="res://Themes/main_theme.tres" id="1_buofo"]
+[ext_resource type="Script" path="res://Scripts/Card/CardDisplay.cs" id="2_g63xu"]
+[ext_resource type="PackedScene" uid="uid://beeu0xknqktf1" path="res://Scenes/Card/card.tscn" id="3_f27r4"]
+
+[node name="CardContainer" type="Control" node_paths=PackedStringArray("container")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 665.0
+offset_bottom = 496.0
+theme = ExtResource("1_buofo")
+script = ExtResource("2_g63xu")
+cardPf = ExtResource("3_f27r4")
+container = NodePath("CardScroll/CardVAlign")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardScroll" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = -18.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardVAlign" type="VBoxContainer" parent="CardScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10

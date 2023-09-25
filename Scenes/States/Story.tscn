@@ -1,0 +1,94 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1df8bof377oy"]
+
+[ext_resource type="Theme" uid="uid://b33xjax1ygtyk" path="res://Themes/main_theme.tres" id="1_3cepj"]
+[ext_resource type="Script" path="res://Scripts/States/StoryMenu.cs" id="2_q62nn"]
+
+[node name="Story" type="Control" node_paths=PackedStringArray("back", "random", "next", "place", "type", "description", "objective")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3cepj")
+script = ExtResource("2_q62nn")
+back = NodePath("StoryMenu/Back")
+random = NodePath("StoryMenu/Random")
+next = NodePath("StoryMenu/Next")
+place = NodePath("StoryForm/PlaceTheme/Place")
+type = NodePath("StoryForm/PlaceTheme/Type")
+description = NodePath("StoryForm/Description")
+objective = NodePath("StoryForm/Objective")
+
+[node name="StoryForm" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -475.0
+offset_top = -256.0
+offset_right = 475.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+metadata/_edit_group_ = true
+
+[node name="PlaceTheme" type="HBoxContainer" parent="StoryForm"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Place" type="TextEdit" parent="StoryForm/PlaceTheme"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Place"
+wrap_mode = 1
+
+[node name="Type" type="TextEdit" parent="StoryForm/PlaceTheme"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Theme"
+wrap_mode = 1
+
+[node name="Description" type="TextEdit" parent="StoryForm"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Description"
+wrap_mode = 1
+
+[node name="Objective" type="TextEdit" parent="StoryForm"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Objective"
+wrap_mode = 1
+
+[node name="StoryMenu" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = 549.0
+offset_right = -236.0
+offset_bottom = -109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+
+[node name="Back" type="Button" parent="StoryMenu"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back"
+
+[node name="Random" type="Button" parent="StoryMenu"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Random"
+
+[node name="Next" type="Button" parent="StoryMenu"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Next"

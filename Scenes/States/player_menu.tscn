@@ -1,0 +1,164 @@
+[gd_scene load_steps=4 format=3 uid="uid://catslrmhvndpq"]
+
+[ext_resource type="Theme" uid="uid://b33xjax1ygtyk" path="res://Themes/main_theme.tres" id="1_k8pho"]
+[ext_resource type="Script" path="res://Scripts/States/PlayerMenu.cs" id="2_wjk17"]
+[ext_resource type="PackedScene" uid="uid://dap8kaj3vuqia" path="res://Scenes/Card/player_cards_display.tscn" id="3_nghty"]
+
+[node name="PlayerMenu" type="Control" node_paths=PackedStringArray("add", "back", "start", "clear", "name", "nick", "ability", "item", "playerCardContainer")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_k8pho")
+script = ExtResource("2_wjk17")
+add = NodePath("AddMenu/HBoxContainer2/VBoxContainer/AddPlayerBtn")
+back = NodePath("AddMenu/HBoxContainer2/VBoxContainer/HBoxContainer/BackBtn")
+start = NodePath("AddMenu/HBoxContainer2/VBoxContainer/HBoxContainer/StartBtn")
+clear = NodePath("ClearBtn")
+name = NodePath("AddMenu/HBoxContainer/VBoxContainer/NameText")
+nick = NodePath("AddMenu/HBoxContainer/VBoxContainer/NickText")
+ability = NodePath("AddMenu/HBoxContainer/VBoxContainer/AbilityText")
+item = NodePath("AddMenu/HBoxContainer/VBoxContainer/ItemText")
+playerCardContainer = NodePath("CardContainer")
+
+[node name="AddMenu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 647.0
+offset_top = 40.0
+offset_right = -36.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 65
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AddMenu"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="AddMenu/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="NameLabel" type="Label" parent="AddMenu/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+text = "Name
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="NickLabel" type="Label" parent="AddMenu/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+text = "Nick
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="AbilityLabel" type="Label" parent="AddMenu/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+text = "Ability"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ItemLabel" type="Label" parent="AddMenu/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+text = "Item
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AddMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="NameText" type="TextEdit" parent="AddMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "John
+"
+wrap_mode = 1
+
+[node name="NickText" type="TextEdit" parent="AddMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Aldur
+"
+wrap_mode = 1
+
+[node name="AbilityText" type="TextEdit" parent="AddMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Fire ball"
+wrap_mode = 1
+
+[node name="ItemText" type="TextEdit" parent="AddMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Relic finger amulet
+"
+wrap_mode = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="AddMenu"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 65
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AddMenu/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="AddPlayerBtn" type="Button" parent="AddMenu/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Add Player"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AddMenu/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 105
+
+[node name="BackBtn" type="Button" parent="AddMenu/HBoxContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Back"
+
+[node name="StartBtn" type="Button" parent="AddMenu/HBoxContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Start"
+
+[node name="CardContainer" parent="." instance=ExtResource("3_nghty")]
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 601.0
+offset_bottom = 586.0
+
+[node name="ClearBtn" type="Button" parent="."]
+layout_mode = 2
+offset_left = 251.0
+offset_top = 611.0
+offset_right = 380.0
+offset_bottom = 669.0
+size_flags_vertical = 3
+text = "Clear"

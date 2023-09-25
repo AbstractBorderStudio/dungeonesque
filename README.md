@@ -1,2 +1,2 @@
 # dungeonesque
- Simple project for a RP manager.
+ Simple project for an RP manager.

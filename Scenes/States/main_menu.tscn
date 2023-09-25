@@ -1,0 +1,313 @@
+[gd_scene load_steps=10 format=3 uid="uid://cix1nx4u4y0ja"]
+
+[ext_resource type="Theme" uid="uid://b33xjax1ygtyk" path="res://Themes/main_theme.tres" id="1_1ax5x"]
+[ext_resource type="Script" path="res://Scripts/States/MainMenu.cs" id="2_7xdch"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4pol"]
+bg_color = Color(0.0859375, 0.292969, 0.375, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.305882)
+shadow_size = 13
+shadow_offset = Vector2(1.915, 0)
+
+[sub_resource type="Animation" id="Animation_3aftd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreditsPopup:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CreditsPopup:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(336, 782)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CreditsPopup:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(608, 344)]
+}
+
+[sub_resource type="Animation" id="Animation_2sm3x"]
+resource_name = "credits_in"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreditsPopup:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.1, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CreditsPopup:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(638, -0.25, 0, 0.25, 0, 262, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_hwbea"]
+resource_name = "credits_out"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreditsPopup:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CreditsPopup:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(262, -0.25, 0, 0.25, 0, 638, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_b7ffr"]
+resource_name = "enter"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1280, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_vvbvc"]
+resource_name = "exit"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1280, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_75muq"]
+_data = {
+"RESET": SubResource("Animation_3aftd"),
+"credits_in": SubResource("Animation_2sm3x"),
+"credits_out": SubResource("Animation_hwbea"),
+"enter": SubResource("Animation_b7ffr"),
+"exit": SubResource("Animation_vvbvc")
+}
+
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("menuAnim", "play", "exit", "credits", "closeCredits")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+theme = ExtResource("1_1ax5x")
+script = ExtResource("2_7xdch")
+menuAnim = NodePath("MainMenuAnim")
+play = NodePath("TitleMenu/ButtonsAling/Play")
+exit = NodePath("TitleMenu/ButtonsAling/Exit")
+credits = NodePath("TitleMenu/ButtonsAling/Credits")
+closeCredits = NodePath("CreditsPopup/CreditCloseBtn")
+metadata/_edit_group_ = true
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 2
+anchor_top = 0.003
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 193.0
+offset_top = -0.16
+offset_right = -189.0
+offset_bottom = -328.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "  
+ [wave]Dungeonesque"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="TitleMenu" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ButtonsAling" type="VBoxContainer" parent="TitleMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="Play" type="Button" parent="TitleMenu/ButtonsAling"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Play"
+
+[node name="Credits" type="Button" parent="TitleMenu/ButtonsAling"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Credits
+"
+
+[node name="Exit" type="Button" parent="TitleMenu/ButtonsAling"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Exit
+"
+
+[node name="CreditsPopup" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 336.0
+offset_top = 782.0
+offset_right = 944.0
+offset_bottom = 1126.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t4pol")
+metadata/_edit_group_ = true
+
+[node name="CreditsText" type="RichTextLabel" parent="CreditsPopup"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 45.0
+offset_top = -121.0
+offset_right = -45.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "[center]This game was made using [wave][color=green]Godot 4.1.1[/color][/wave] 
+Hope you enjoy :)
+This is a RP game. Sit with your friend and start an adventure. Choose someone that will be the narrator and then PLAY!"
+fit_content = true
+scroll_active = false
+
+[node name="CreditCloseBtn" type="Button" parent="CreditsPopup"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 65.0
+offset_top = -90.0
+offset_right = -65.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Close"
+
+[node name="MainMenuAnim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_75muq")
+}
+
+[node name="MainMenuSound" type="AudioStreamPlayer" parent="."]

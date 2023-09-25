@@ -1,0 +1,12 @@
+[gd_scene load_steps=5 format=3 uid="uid://241o01nms81s"]
+
+[ext_resource type="Script" path="res://Scripts/SceneHandler.cs" id="1_c3jed"]
+[ext_resource type="PackedScene" uid="uid://cix1nx4u4y0ja" path="res://Scenes/States/main_menu.tscn" id="2_y4amu"]
+[ext_resource type="PackedScene" uid="uid://c1df8bof377oy" path="res://Scenes/States/Story.tscn" id="3_aaux1"]
+[ext_resource type="PackedScene" uid="uid://catslrmhvndpq" path="res://Scenes/States/player_menu.tscn" id="4_2846f"]
+
+[node name="SceneHandler" type="Node"]
+script = ExtResource("1_c3jed")
+pkStates = Array[PackedScene]([ExtResource("2_y4amu"), ExtResource("3_aaux1"), ExtResource("4_2846f")])
+
+[node name="SceneAnim" type="AnimationPlayer" parent="."]

@@ -1,0 +1,32 @@
+[gd_scene load_steps=11 format=3 uid="uid://dwaxktydbm3m4"]
+
+[ext_resource type="PackedScene" uid="uid://ckaygkmvqsam6" path="res://Scenes/game_handler.tscn" id="1_uc1us"]
+[ext_resource type="PackedScene" uid="uid://cix1nx4u4y0ja" path="res://Scenes/States/main_menu.tscn" id="2_fsmj0"]
+[ext_resource type="PackedScene" uid="uid://241o01nms81s" path="res://Scenes/scene_handler.tscn" id="2_ytex5"]
+[ext_resource type="PackedScene" uid="uid://c1df8bof377oy" path="res://Scenes/States/Story.tscn" id="3_vlqs3"]
+[ext_resource type="Shader" path="res://Shader/applyTexture.gdshader" id="3_wy8l6"]
+[ext_resource type="Texture2D" uid="uid://bedugdhn7l83a" path="res://Textures/paper.png" id="4_f11li"]
+[ext_resource type="PackedScene" uid="uid://catslrmhvndpq" path="res://Scenes/States/player_menu.tscn" id="4_n8iy6"]
+[ext_resource type="Theme" uid="uid://b33xjax1ygtyk" path="res://Themes/main_theme.tres" id="5_kq40w"]
+[ext_resource type="PackedScene" uid="uid://duyw7ogmio1ly" path="res://Scenes/States/game_menu.tscn" id="6_df53t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_og4v4"]
+shader = ExtResource("3_wy8l6")
+shader_parameter/_col = Color(0.309804, 0.309804, 0.309804, 1)
+shader_parameter/texture = ExtResource("4_f11li")
+
+[node name="App" type="Node"]
+
+[node name="GameHandler" parent="." instance=ExtResource("1_uc1us")]
+
+[node name="SceneHandler" parent="." instance=ExtResource("2_ytex5")]
+pkStates = Array[PackedScene]([ExtResource("2_fsmj0"), ExtResource("3_vlqs3"), ExtResource("4_n8iy6"), ExtResource("6_df53t")])
+
+[node name="Background" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_og4v4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_kq40w")

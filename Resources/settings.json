@@ -1,0 +1,151 @@
+{
+  "places": [
+	{
+	  "name": "Neonopolis Megacity",
+	  "theme": "Science Fiction",
+	  "description": "Futuristic city of neon lights and cyber enhancements.",
+	  "objective": "Expose a corrupt megacorporation's unethical experiments.",
+	  "entities": ["NexaCorp", "Cyber-enhanced rebels", "AI-controlled drones", "Neonopolis Central", "Bionic Underground"]
+	},
+	{
+	  "name": "Starship Nova",
+	  "theme": "Space",
+	  "description": "Interstellar cruiser exploring uncharted galaxies.",
+	  "objective": "Investigate an anomaly threatening the ship's warp drive.",
+	  "entities": ["Captain Solara", "Starship crew", "Alien diplomats", "Cosmic rift", "Void Pirates"]
+	},
+	{
+	  "name": "Mystical Eldoria",
+	  "theme": "Fantasy",
+	  "description": "Magical realm with mythical creatures and enchanted forests.",
+	  "objective": "Rescue the captured Elven Queen from a dark sorcerer.",
+	  "entities": ["Elven Queen Lyria", "Sylvan Guardians", "Dark Sorcerer Malachar", "Enchanted Glade", "Mystic Fae"]
+	},
+	{
+	  "name": "Pirate's Den: Skullhaven",
+	  "theme": "Pirates",
+	  "description": "Hidden pirate stronghold with treacherous waters and buried treasures.",
+	  "objective": "Locate a map to the legendary Ghost Pirate's hoard.",
+	  "entities": ["Ghost Pirate Captain Grimbeard", "Rival pirate crews", "Cursed treasure map", "Rum Cove", "Haunted Shipwreck"]
+	},
+	{
+	  "name": "Hawkins Lab Complex",
+	  "theme": "Stranger Things",
+	  "description": "Government lab with paranormal experiments gone wrong.",
+	  "objective": "Uncover the truth behind a portal to the Upside-Down.",
+	  "entities": ["Dr. Martin Hawkins", "Telekinetic test subjects", "Demogorgon entity", "Upside-Down portal", "Secret Experiment Files"]
+	},
+	{
+	  "name": "Dusty Gulch: Wild West",
+	  "theme": "Western",
+	  "description": "Old frontier town with dusty streets and saloons.",
+	  "objective": "Bring law and order to Dusty Gulch amidst a gang feud.",
+	  "entities": ["Sheriff Wyatt Stone", "Outlaw gang - The Dust Devils", "Saloon shootout", "Gold Rush mine", "Frontier Bank"]
+	},
+	{
+	  "name": "Haunted Asylum: Thornfield Manor",
+	  "theme": "Horror",
+	  "description": "Abandoned asylum filled with malevolent spirits and cursed relics.",
+	  "objective": "Banish the vengeful spirits haunting Thornfield Manor.",
+	  "entities": ["Ghostly Nurse Agatha", "Paranormal investigators", "Possessed dolls", "Sinister Séance Room", "Cursed Journal"]
+	},
+	{
+	  "name": "Comedy Circus Carnival",
+	  "theme": "Comedy",
+	  "description": "Whimsical carnival with hilarious attractions and clowns.",
+	  "objective": "Retrieve the world's funniest joke from the Laughing Ringmaster.",
+	  "entities": ["Laughing Ringmaster Jovial Joe", "Giggling Gnomes", "Pie-throwing contest", "Sideshow Alley", "The Great Chuckle Wheel"]
+	},
+	{
+	  "name": "Astronaut Outpost Omega",
+	  "theme": "Space",
+	  "description": "Remote space outpost on an alien planet.",
+	  "objective": "Rescue stranded astronauts and repair the outpost's communication.",
+	  "entities": ["Astronaut Commander Nova", "Alien wildlife", "Damaged comms array", "Exoplanet Flora", "Stellar Viewpoint Tower"]
+	},
+	{
+	  "name": "Elven Sanctuary: Luminescent Glade",
+	  "theme": "Fantasy",
+	  "description": "Enchanted elven sanctuary with glowing flora.",
+	  "objective": "Retrieve an ancient elven artifact guarded by mystical creatures.",
+	  "entities": ["Elder Elf Guardian Lirelia", "Glowing Wisps", "Enchanted Waterfall", "Moonlit Bower", "Ancient Elven Amulet"]
+	},
+	{
+	  "name": "Ghost Ship: The Phantom Galleon",
+	  "theme": "Pirates",
+	  "description": "Spectral pirate ship sailed by vengeful ghosts.",
+	  "objective": "Release the cursed souls aboard by fulfilling their unfinished business.",
+	  "entities": ["Cursed Pirate Captain Blackheart", "Ghostly Crew", "Ethereal Treasure Chest", "Stormy Waters", "Forgotten Diary"]
+	},
+	{
+	  "name": "Dreaded Haunted Forest",
+	  "theme": "Horror",
+	  "description": "Dark, eerie forest with sinister creatures lurking.",
+	  "objective": "Survive the forest's horrors and find a way out.",
+	  "entities": ["Malevolent Forest Spirit", "Shadowy Figures", "Cursed Grove", "Spooky Fog", "Creepy Tree Stump"]
+	},
+	{
+	  "name": "Space Station Laughter Orbit",
+	  "theme": "Comedy",
+	  "description": "Orbital station filled with hilarious alien comedians.",
+	  "objective": "Help a bumbling alien comedian find their missing punchline.",
+	  "entities": ["Clownish Comedian Zog", "Alien Audience", "Slapstick Gags", "Galactic Comedy Showcase", "Cosmic Chuckle Lounge"]
+	},
+	{
+	  "name": "Underwater Pirate Hideaway",
+	  "theme": "Pirates",
+	  "description": "Sunken pirate hideout with buried treasure.",
+	  "objective": "Retrieve the sunken treasure map and locate the hidden loot.",
+	  "entities": ["Captain Barnacle Beard", "Sunken Shipwrecks", "Treasure Map Parchment", "Glowing Coral Caves", "Shark Guardian"]
+	},
+	{
+	  "name": "Mystical Academy of Wonders",
+	  "theme": "Fantasy",
+	  "description": "Magical academy with spells and mythical creatures.",
+	  "objective": "Solve arcane puzzles to prove your magical prowess.",
+	  "entities": ["Headmaster Merlinius", "Magical Beasts", "Enchanted Labyrinth", "Spellcasting Duels", "Ancient Spellbook"]
+	},
+	{
+	  "name": "Galactic Comedy Club: Hilaritron",
+	  "theme": "Comedy",
+	  "description": "Intergalactic comedy club featuring alien comedians.",
+	  "objective": "Win a galaxy-wide stand-up comedy competition.",
+	  "entities": ["Alien Stand-up Comedians", "Cosmic Comedy Contest", "Gigglesphere Stage", "Joke-a-Tron 9000", "Pun-tastic Trophy"]
+	},
+	{
+	  "name": "Secret Moon Base: Lunar Alpha",
+	  "theme": "Space",
+	  "description": "Hidden moon base with classified lunar research.",
+	  "objective": "Retrieve critical lunar research data and escape before discovery.",
+	  "entities": ["Moon Base Commander Luna", "Security Drones", "Lunar Research Archives", "Hidden Escape Tunnel", "Alien Moon Rock"]
+	},
+	{
+	  "name": "Crypt of the Cursed Pharaoh",
+	  "theme": "Horror",
+	  "description": "Ancient tomb filled with traps and restless spirits.",
+	  "objective": "Recover a stolen artifact and escape the cursed tomb.",
+	  "entities": ["Cursed Pharaoh's Sarcophagus", "Ancient Hieroglyphs", "Scarab Beetles", "Labyrinthine Passages", "Mummy's Curse"]
+	},
+	{
+	  "name": "Feywild Carnival",
+	  "theme": "Fantasy",
+	  "description": "Enchanted carnival in the mystical Feywild.",
+	  "objective": "Complete a series of whimsical challenges to earn fey treasures.",
+	  "entities": ["Feywild Ringmaster Oberon", "Mischievous Pixies", "Wishing Well", "Mystic Mirror Maze", "Feywild Trinkets"]
+	},
+	{
+	  "name": "Galactic Comedy Club: Hilaritron",
+	  "theme": "Comedy",
+	  "description": "Intergalactic comedy club featuring alien comedians.",
+	  "objective": "Win a galaxy-wide stand-up comedy competition.",
+	  "entities": ["Alien Stand-up Comedians", "Cosmic Comedy Contest", "Gigglesphere Stage", "Joke-a-Tron 9000", "Pun-tastic Trophy"]
+	},
+	{
+	  "name": "Secret Moon Base: Lunar Alpha",
+	  "theme": "Space",
+	  "description": "Hidden moon base with classified lunar research.",
+	  "objective": "Retrieve critical lunar research data and escape before discovery.",
+	  "entities": ["Moon Base Commander Luna", "Security Drones", "Lunar Research Archives", "Hidden Escape Tunnel", "Alien Moon Rock"]
+	}
+  ]
+}
