@@ -1,0 +1,269 @@
+[gd_scene load_steps=19 format=3 uid="uid://dmf44v12eiv2j"]
+
+[ext_resource type="Script" path="res://Scripts/CurrentPlayerContainer.cs" id="1_phrcm"]
+[ext_resource type="Texture2D" uid="uid://b87vu32txkush" path="res://Textures/DiceSprSheetX96.png" id="2_7ouxa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arlax"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xflqt"]
+bg_color = Color(1, 0.890196, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lhtjj"]
+bg_color = Color(0.0546875, 0.191406, 0.246094, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 0)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.160784)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bq3mi"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 0)
+border_blend = true
+corner_radius_top_left = 150
+corner_radius_top_right = 150
+corner_radius_bottom_right = 150
+corner_radius_bottom_left = 150
+shadow_color = Color(0, 0, 0, 0.258824)
+shadow_size = 10
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_baw2l"]
+atlas = ExtResource("2_7ouxa")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0g4g"]
+atlas = ExtResource("2_7ouxa")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdtci"]
+atlas = ExtResource("2_7ouxa")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xubgm"]
+atlas = ExtResource("2_7ouxa")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ann0d"]
+atlas = ExtResource("2_7ouxa")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2uuw2"]
+atlas = ExtResource("2_7ouxa")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6qebr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_baw2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0g4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdtci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xubgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ann0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2uuw2")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s75e3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_to6ji"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vix1s"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6rc8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hly7b"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="CurrentPlayerContainer" type="Control" node_paths=PackedStringArray("name", "ability", "item", "bar", "dice", "diceButton")]
+layout_mode = 3
+anchor_left = 0.510156
+anchor_top = 0.0388889
+anchor_right = 0.983594
+anchor_bottom = 0.65
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_phrcm")
+name = NodePath("Background/Name")
+ability = NodePath("Background/Details/MarginContainer/VBoxContainer/Ability")
+item = NodePath("Background/Details/MarginContainer/VBoxContainer/Item")
+bar = NodePath("Background/TimeBar")
+dice = NodePath("Background/Panel/Dice")
+diceButton = NodePath("Background/Panel/DiceButton")
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="Label" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.368243
+anchor_top = 0.0809524
+anchor_right = 0.923986
+anchor_bottom = 0.416667
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 46
+text = "Jilard the conqueror of the world"
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TimeBar" type="ProgressBar" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.369932
+anchor_top = 0.45
+anchor_right = 0.920608
+anchor_bottom = 0.503973
+offset_left = -0.179062
+offset_top = -5.99998
+offset_right = 0.111511
+offset_bottom = 6.25189
+theme_override_styles/background = SubResource("StyleBoxFlat_arlax")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xflqt")
+max_value = 60.0
+value = 60.0
+show_percentage = false
+
+[node name="ProgressLabel" type="Label" parent="Background/TimeBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.8547
+offset_top = -13.8741
+offset_right = 26.1453
+offset_bottom = 16.1259
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "30s"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Details" type="Panel" parent="Background"]
+layout_mode = 0
+anchor_left = 0.0330033
+anchor_top = 0.575
+anchor_right = 0.960396
+anchor_bottom = 0.945455
+theme_override_styles/panel = SubResource("StyleBoxFlat_lhtjj")
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/Details"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/Details/MarginContainer"]
+layout_mode = 2
+
+[node name="Ability" type="Label" parent="Background/Details/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "SUPER SWORD"
+vertical_alignment = 1
+
+[node name="Item" type="Label" parent="Background/Details/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "SUPER SWORD"
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 18.0
+offset_top = 23.0
+offset_right = 203.0
+offset_bottom = 208.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bq3mi")
+metadata/_edit_use_anchors_ = true
+
+[node name="Dice" type="AnimatedSprite2D" parent="Background/Panel"]
+position = Vector2(93.0004, 92)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_6qebr")
+animation = &"roll"
+
+[node name="DiceButton" type="Button" parent="Background/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.167568
+anchor_top = 0.156757
+anchor_right = 0.837838
+anchor_bottom = 0.827027
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_s75e3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_to6ji")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vix1s")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_d6rc8")
+theme_override_styles/focus = SubResource("StyleBoxFlat_hly7b")
+metadata/_edit_use_anchors_ = true

@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://b33xjax1ygtyk"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://b33xjax1ygtyk"]
 
 [ext_resource type="FontFile" uid="uid://3ktt1r1ax64h" path="res://Themes/Fonts/alagard.ttf" id="1_xvuvl"]
 
@@ -61,6 +61,9 @@ corner_radius_bottom_left = 10
 shadow_color = Color(0, 0, 0, 0.266667)
 shadow_size = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ohn2"]
+bg_color = Color(0.913725, 0.615686, 0, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqswl"]
 content_margin_left = 10.0
 content_margin_top = 10.0
@@ -78,6 +81,7 @@ Button/styles/hover = SubResource("StyleBoxFlat_ytacr")
 Button/styles/normal = SubResource("StyleBoxFlat_jbgbr")
 Label/font_sizes/font_size = 25
 Panel/styles/panel = SubResource("StyleBoxFlat_ejga3")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_1ohn2")
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/constants/outline_size = 38
 RichTextLabel/font_sizes/normal_font_size = 123
