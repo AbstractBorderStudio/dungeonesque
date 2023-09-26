@@ -55,10 +55,10 @@ namespace Dungeonesque {
 
         public void AddPlayer()
         {
-            string _name = name.Text;
-            string _nick = nick.Text;
-            string _ability = ability.Text;
-            string _item = item.Text;
+            string _name = name.Text.Trim();
+            string _nick = nick.Text.Trim();
+            string _ability = ability.Text.Trim();
+            string _item = item.Text.Trim();
 
             
             if (_name == "" || _nick == "" || _ability == "" || _item == "") return;

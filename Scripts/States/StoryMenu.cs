@@ -68,10 +68,10 @@ namespace Dungeonesque
             Dictionary story = storyList[random.Next(0, storyList.Count)]; 
 
             // set values
-            place.Text = newStory.Place = story["name"].As<string>();
-            type.Text = newStory.Type = story["theme"].As<string>();
-            description.Text = newStory.Description = story["description"].As<string>();
-            objective.Text = newStory.Objective = story["objective"].As<string>();
+            place.Text = newStory.Place = story["name"].As<string>().Trim();
+            type.Text = newStory.Type = story["theme"].As<string>().Trim();
+            description.Text = newStory.Description = story["description"].As<string>().Trim();
+            objective.Text = newStory.Objective = story["objective"].As<string>().Trim();
             newStory.Entities = story["entities"].As<Array<string>>();
 
             // set story

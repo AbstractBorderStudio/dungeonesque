@@ -44,25 +44,25 @@ theme_override_constants/separation = 20
 [node name="Place" type="TextEdit" parent="StoryForm/PlaceTheme"]
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "Place"
+placeholder_text = "Fright night in 654 road ave."
 wrap_mode = 1
 
 [node name="Type" type="TextEdit" parent="StoryForm/PlaceTheme"]
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "Theme"
+placeholder_text = "Horror"
 wrap_mode = 1
 
 [node name="Description" type="TextEdit" parent="StoryForm"]
 layout_mode = 2
 size_flags_vertical = 3
-placeholder_text = "Description"
+placeholder_text = "Mist surround you and you can't see nothig more that a smear light of a small house in front of you."
 wrap_mode = 1
 
 [node name="Objective" type="TextEdit" parent="StoryForm"]
 layout_mode = 2
 size_flags_vertical = 3
-placeholder_text = "Objective"
+placeholder_text = "Find out what's happening and search a way to esacpe"
 wrap_mode = 1
 
 [node name="StoryMenu" type="HBoxContainer" parent="."]

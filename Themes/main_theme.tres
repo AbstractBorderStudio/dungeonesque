@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://b33xjax1ygtyk"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://b33xjax1ygtyk"]
 
 [ext_resource type="FontFile" uid="uid://3ktt1r1ax64h" path="res://Themes/Fonts/alagard.ttf" id="1_xvuvl"]
 
@@ -61,6 +61,13 @@ corner_radius_bottom_left = 10
 shadow_color = Color(0, 0, 0, 0.266667)
 shadow_size = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqswl"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 0.0
+content_margin_bottom = 10.0
+draw_center = false
+
 [resource]
 default_font = ExtResource("1_xvuvl")
 Button/colors/font_color = Color(1, 1, 1, 1)
@@ -74,4 +81,5 @@ Panel/styles/panel = SubResource("StyleBoxFlat_ejga3")
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/constants/outline_size = 38
 RichTextLabel/font_sizes/normal_font_size = 123
-TextEdit/font_sizes/font_size = 40
+ScrollContainer/styles/panel = SubResource("StyleBoxFlat_iqswl")
+TextEdit/font_sizes/font_size = 30

@@ -1,10 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://duyw7ogmio1ly"]
+[gd_scene load_steps=6 format=3 uid="uid://duyw7ogmio1ly"]
 
 [ext_resource type="PackedScene" uid="uid://dap8kaj3vuqia" path="res://Scenes/Card/player_cards_display.tscn" id="1_66aj2"]
 [ext_resource type="Theme" uid="uid://b33xjax1ygtyk" path="res://Themes/main_theme.tres" id="1_hmrre"]
 [ext_resource type="Script" path="res://Scripts/States/GameMenu.cs" id="2_j3s1y"]
+[ext_resource type="PackedScene" uid="uid://cl80fmexomfkt" path="res://Scenes/story_container.tscn" id="4_gim0y"]
 
-[node name="GameMenu" type="Control" node_paths=PackedStringArray("cardDisplay", "rand")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bq3mi"]
+corner_radius_top_left = 150
+corner_radius_top_right = 150
+corner_radius_bottom_right = 150
+corner_radius_bottom_left = 150
+
+[node name="GameMenu" type="Control" node_paths=PackedStringArray("rand", "cardDisplay", "storyContainer")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,26 +20,112 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_hmrre")
 script = ExtResource("2_j3s1y")
-cardDisplay = NodePath("CardContainer")
 rand = NodePath("Button")
+cardDisplay = NodePath("CardContainer")
+storyContainer = NodePath("StoryContainer")
 
 [node name="CardContainer" parent="." instance=ExtResource("1_66aj2")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0148437
+anchor_left = 0.175781
 anchor_top = 0.0263889
-anchor_right = 0.454688
-anchor_bottom = 0.968056
+anchor_right = 0.813281
+anchor_bottom = 0.227778
 offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="."]
+[node name="StoryContainer" parent="." instance=ExtResource("4_gim0y")]
+layout_mode = 1
+anchor_left = 0.021875
+anchor_top = 0.244444
+anchor_right = 0.492187
+anchor_bottom = 0.955555
+
+[node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 834.0
-offset_top = 305.0
-offset_right = 1019.0
-offset_bottom = 363.0
+offset_left = 655.0
+offset_top = 182.0
+offset_right = 1247.0
+offset_bottom = 688.0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 867.0
+offset_top = 130.0
+offset_right = 1043.0
+offset_bottom = 306.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bq3mi")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.557031
+anchor_top = 0.843056
+anchor_right = 0.701563
+anchor_bottom = 0.923611
+offset_bottom = 0.000427246
 text = "random"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.771094
+anchor_top = 0.840278
+anchor_right = 0.915626
+anchor_bottom = 0.920834
+text = "random"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.557031
+anchor_top = 0.705556
+anchor_right = 0.701563
+anchor_bottom = 0.786111
+offset_bottom = 0.000427246
+text = "random"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.771094
+anchor_top = 0.702778
+anchor_right = 0.915626
+anchor_bottom = 0.783334
+text = "random"
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.617969
+anchor_top = 0.451389
+anchor_right = 0.86875
+anchor_bottom = 0.505556
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 60.0
+value = 28.0
+rounded = true
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 135.0
+offset_top = 4.0
+offset_right = -135.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "30s"
+horizontal_alignment = 1
+vertical_alignment = 1

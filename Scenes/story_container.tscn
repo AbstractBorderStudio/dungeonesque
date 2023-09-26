@@ -1,0 +1,110 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl80fmexomfkt"]
+
+[ext_resource type="Script" path="res://Scripts/StoryContainer.cs" id="1_cgb2a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgw3p"]
+bg_color = Color(0, 0, 0, 0.392157)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aldrk"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="StoryContainer" type="Control" node_paths=PackedStringArray("title", "desc", "obj")]
+layout_mode = 3
+anchor_right = 0.470312
+anchor_bottom = 0.711111
+script = ExtResource("1_cgb2a")
+title = NodePath("StoryBackground/Title")
+desc = NodePath("StoryBackground/DescContainer/Description")
+obj = NodePath("Panel/ObjectiveContainer/Objective")
+metadata/_edit_use_anchors_ = true
+
+[node name="StoryBackground" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="StoryBackground"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.038206
+anchor_top = 0.0253906
+anchor_right = 0.961794
+anchor_bottom = 0.287109
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 50
+text = "The pirate ship"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="DescContainer" type="ScrollContainer" parent="StoryBackground"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0448505
+anchor_top = 0.261719
+anchor_right = 0.960133
+anchor_bottom = 0.625
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="Label" parent="StoryBackground/DescContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_xgw3p")
+text = "The pirate king has died, you are aboard the cursed black pearl"
+autowrap_mode = 3
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0415283
+anchor_top = 0.658203
+anchor_right = 0.958473
+anchor_bottom = 0.966797
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_aldrk")
+metadata/_edit_use_anchors_ = true
+
+[node name="ObjectiveContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Objective" type="RichTextLabel" parent="Panel/ObjectiveContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center][wave freq=5.0]Escape from the imperial that are trying to capture you and your crew
+"
+metadata/_edit_use_anchors_ = true

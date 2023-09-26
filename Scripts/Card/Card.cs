@@ -2,18 +2,20 @@ using Godot;
 
 public partial class Card : Control
 {
-	const string BASE_COLOR = "000000";
-	const string HIGH_COLOR = "DEC621";
+	private const string BASE_COLOR = "000000",
+		HIGH_COLOR = "DEC621";
 
 	[Export]
 	private Label name, ability, item, hp, init;
 	[Export]
-	private StyleBoxFlat background;
+	private StyleBoxFlat backgroundMat;
 
 	public void Highlight(bool highlighted)
 	{
-		if (highlighted) background.BgColor = new Color(HIGH_COLOR);
-		else background.BgColor = new Color(BASE_COLOR);
+		backgroundMat.SetupLocalToScene();
+		
+		if (highlighted) backgroundMat.BgColor = new Color(HIGH_COLOR);
+		else backgroundMat.BgColor = new Color(BASE_COLOR);
 	}
 
 	public void SetCard(string _name,
@@ -29,3 +31,7 @@ public partial class Card : Control
 		init.Text = _init;
 	}
 }
+
+
+
+//ShaderMaterial _mat = background.Material as ShaderMaterial;
